@@ -73,11 +73,12 @@ def main():
         elif choice == "5":
             room_manager.show_rooms()
         elif choice == "6":
-            customer_name = input("Enter customer name: ")
-            room_number = int(input("Enter room number: "))
-            check_in_date = input("Enter check-in date (YYYY-MM-DD): ")
-            check_out_date = input("Enter check-out date (YYYY-MM-DD): ")
-            reservation_manager.make_reservation(customer_name, room_number, check_in_time, check_out_time)
+             customer_name = input("Enter customer name: ")
+             room_number = int(input("Enter room number: "))
+             check_in_date = input("Enter check-in date (YYYY-MM-DD): ")
+             check_out_date = input("Enter check-out date (YYYY-MM-DD): ")
+             reservation_manager.make_reservation(customer_name, room_number, check_in_date, check_out_date)
+
         elif choice == "7":
             name = input("Enter customer name: ")
             contact_info = input("Enter customer contact info: ")

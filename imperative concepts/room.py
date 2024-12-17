@@ -4,6 +4,15 @@ class Room:
         self.db = db
 
     def add_room(self, room_number, room_type, price):
+        # Check if the room already exists
+        check_query = "SELECT * FROM rooms WHERE roomNumber = ?"
+        existing_room = self.db.fetch_one(check_query, (room_number,))
+    
+        if existing_room:
+            print(f"Room {room_number} already exists. Cannot add duplicate room.")
+            return
+    
+        # Insert the new room if it does not exist
         query = "INSERT INTO rooms (roomNumber, roomType, price, availability) VALUES (?, ?, ?, 1)"
         self.db.execute_query(query, (room_number, room_type, price))
         print(f"Room {room_number} added successfully.")
@@ -28,8 +37,15 @@ class Room:
     def book_room(self, room_number, customer_name, check_in_time, check_out_time):
         """Book a room by customer name and link it to the room."""
         # Look up the customer ID by customer name
-        query = "SELECT customerID FROM customers WHERE name = ?"
-        customer = self.db.fetch_one(query, (customer_name,))
+        query = """
+        UPDATE rooms
+        SET availability = 0,
+            customerID = (SELECT customerID FROM customers WHERE name = ?),
+            check_in_time = ?,
+            check_out_time = ?
+        WHERE roomNumber = ?
+    """
+        customer = self.db.fetch_one(query, (customer_name,check_in_time, check_out_time, room_number))
     
         if customer is None:
            print(f"No customer found with the name: {customer_name}")
