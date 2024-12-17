@@ -1,0 +1,42 @@
+[
+    {
+        "customerName": "Mira Hesham",
+        "roomNumber": 102,
+        "dates": [
+            "2024-12-20",
+            "2024-12-25"
+        ]
+    },
+    {
+        "customerName": "Dina Hesham",
+        "roomNumber": 103,
+        "dates": [
+            "2024-12-18",
+            "2024-12-22"
+        ]
+    },
+    {
+        "customerName": " Hesham Helmy ",
+        "roomNumber": 101,
+        "dates": [
+            "2024-12-18",
+            "2024-12-22"
+        ]
+    },
+    {
+        "customerName": "koiaa",
+        "roomNumber": 10002,
+        "dates": [
+            "2024-12-30",
+            "2024-12-31"
+        ]
+    },
+    {
+        "customerName": "koia",
+        "roomNumber": 1123,
+        "dates": [
+            "2024-12-21",
+            "2024-12-25"
+        ]
+    }
+]

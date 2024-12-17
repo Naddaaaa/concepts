@@ -1,0 +1,27 @@
+[
+    {
+        "name": "koia",
+        "contactInfo": "433333",
+        "paymentMethod": "credit"
+    },
+    {
+        "name": "Neeven",
+        "contactInfo": "9334442",
+        "paymentMethod": "credit"
+    },
+    {
+        "name": "Hesham",
+        "contactInfo": "0112345678",
+        "paymentMethod": "credit"
+    },
+    {
+        "name": "Mira Hesham ",
+        "contactInfo": "john.doe@example.com",
+        "paymentMethod": "Credit Card"
+    },
+    {
+        "name": "Dina Hesham",
+        "contactInfo": "jane.smith@example.com",
+        "paymentMethod": "PayPal"
+    }
+]

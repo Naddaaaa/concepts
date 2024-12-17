@@ -1,0 +1,14 @@
+[
+    {
+        "roomNumber": 1123,
+        "roomType": "single",
+        "price": 4567,
+        "available": false
+    },
+    {
+        "roomNumber": 100,
+        "roomType": "single",
+        "price": 345,
+        "available": false
+    }
+]
