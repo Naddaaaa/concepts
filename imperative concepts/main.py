@@ -39,14 +39,12 @@ def main():
         print("4. Release Room")
         print("5. Show All Rooms")
         print("6. Make Reservation")
-        print("7. Check In")
-        print("8. Check Out")
-        print("9. Add Customer")
-        print("10. Search Customer")
-        print("11. Update Customer")
-        print("12. Generate Bill")
-        print("13. Generate Report")
-        print("14. Exit")
+        print("7. Add Customer")
+        print("8. Search Customer")
+        print("9. Update Customer")
+        print("10. Generate Bill")
+        print("11. Generate Report")
+        print("12. Exit")
         
 
         choice = input("Enter your choice: ")
@@ -81,26 +79,20 @@ def main():
             check_out_date = input("Enter check-out date (YYYY-MM-DD): ")
             reservation_manager.make_reservation(customer_name, room_number, check_in_time, check_out_time)
         elif choice == "7":
-            room_number = int(input("Enter room number: "))
-            reservation_manager.check_in(room_number)
-        elif choice == "8":
-            room_number = int(input("Enter room number: "))
-            reservation_manager.check_out(room_number)
-        elif choice == "9":
             name = input("Enter customer name: ")
             contact_info = input("Enter customer contact info: ")
             payment_method = input("Enter payment method: ")
             customer_manager.add_customer(name, contact_info, payment_method)
-        elif choice == "10":
+        elif choice == "8":
             name = input("Enter customer name to search: ")
             customer_manager.search_customer(name)
-        elif choice == "11":
+        elif choice == "9":
             customer_name = input("Enter customer name to update: ")
             name = input("Enter new name (leave blank to keep current): ")
             contact_info = input("Enter new contact info (leave blank to keep current): ")
             payment_method = input("Enter new payment method (leave blank to keep current): ")
             customer_manager.update_customer(customer_name, name or None, contact_info or None, payment_method or None)
-        elif choice == '12':
+        elif choice == '10':
             room_number = int(input("Enter room number for the bill: "))
             
             # Get the room details (room type, customer_id)
@@ -127,7 +119,7 @@ def main():
                     print("No customer is linked to this room.")
             else:
                 print("Room not found.")
-        elif choice == "13":
+        elif choice == "11":
              print("1. Room Occupancy Report")
              
              report_choice = input("Enter report choice: ")
@@ -138,7 +130,7 @@ def main():
                 reporting.room_occupancy_rate(start_date, end_date)
              else:
                print("Invalid report choice.")
-        elif choice == "14":
+        elif choice == "12":
             print("Exiting...")
             break
         else:
