@@ -1,0 +1,18 @@
+[
+    {
+        "customerName": "Mira",
+        "roomNumber": 101,
+        "dates": [
+            "2024-12-30",
+            "2024-12-31"
+        ]
+    },
+    {
+        "customerName": "Dina",
+        "roomNumber": 101,
+        "dates": [
+            "2024-12-01",
+            "2024-12-05"
+        ]
+    }
+]

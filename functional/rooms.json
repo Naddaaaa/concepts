@@ -1,0 +1,8 @@
+[
+    {
+        "roomNumber": 101,
+        "roomType": "single",
+        "price": 1234,
+        "available": false
+    }
+]
